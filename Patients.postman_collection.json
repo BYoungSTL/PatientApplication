@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "56c148b2-be43-4267-b24b-3ecc4b926753",
+		"name": "Patients",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32861131"
+	},
+	"item": [
+		{
+			"name": "Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"Gender\":\"male\",\"BirthDate\":\"1994-02-07T00:00:00.000Z\",\"IsActive\":true,\"Name\":{\"Id\":\"DB1E5D2D-3E06-45C7-8B63-BFB2DF4DB7A4\",\"Use\":\"string\",\"Family\":\"postmanUser\",\"Given\":[\"postmanUser\",\"postmanUser\"]}}]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7093/add",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7093",
+					"path": [
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"gender\": \"male\",\r\n  \"birthDate\": \"2024-01-13T18:25:43\",\r\n  \"isActive\": true,\r\n  \"name\": {\r\n    \"id\": \"730018A0-7E63-403D-AA3F-354DD8052689\",\r\n    \"use\": \"official\",\r\n    \"family\": \"postmanUpd\",\r\n    \"given\": [\r\n      \"postmanUpd\",\r\n      \"postmanUpd\"\r\n    ]\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7093/update",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7093",
+					"path": [
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7093/delete?id=730018A0-7E63-403D-AA3F-354DD8052689",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7093",
+					"path": [
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "730018A0-7E63-403D-AA3F-354DD8052689"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "date equal",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7093/getByDate?date=eq2006-12-21",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7093",
+					"path": [
+						"getByDate"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "eq2006-12-21"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "date less than",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7093/getByDate?date=lt2006-12-21",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7093",
+					"path": [
+						"getByDate"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "lt2006-12-21"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7093/id?id=E31D1438-4306-4514-B311-0842A81879F2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7093",
+					"path": [
+						"id"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "E31D1438-4306-4514-B311-0842A81879F2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
